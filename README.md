@@ -1,4 +1,4 @@
-# Example UI test with kotlin,selenide,selenoid
+# Example UI test with kotlin, selenide, selenoid
 
 
 
