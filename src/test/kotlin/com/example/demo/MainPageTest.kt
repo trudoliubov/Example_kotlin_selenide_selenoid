@@ -19,14 +19,14 @@ class MainPageTest {
         setUp.setUp()
     }
 
-    @Test
+    @Test(priority = 0)
     fun confirmCode() {
         mainPage.nextBtn.click()
         CheckingMails.check("imap.gmail.com", "993", "somemail@gmail.com", "password")
         personPage.confirmCode.sendKeys(code)
         element(byXpath("//*[@id=\"root\"]/div[2]/div/div[2]/div[4]/div[6]/input")).shouldHave(value("+$code"))
     }
-    @Test
+    @Test(priority = 1)
     fun Surname() {
         mainPage.nextBtn.click()
         personPage.surname.sendKeys("Aleksandr")
