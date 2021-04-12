@@ -8,6 +8,8 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    google()
+    jcenter()
 }
 
 sourceCompatibility = 1.8
@@ -29,6 +31,7 @@ dependencies {
     implementation('com.codeborne:selenide:5.16.2')
     testImplementation('org.slf4j:slf4j-simple:1.7.29')
     testImplementation('org.testng:testng:7.1.0')
+    implementation('javax.mail:mail:1.4.7')
 }
 
 test {
