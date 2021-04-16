@@ -7,11 +7,13 @@ import org.testng.annotations.*
 import utils.CheckingMails
 import utils.CheckingMails.code
 import utils.SetUp
+import utils.SetUpSelenoid
 
 class MainPageTest {
     private val mainPage = MainPage()
     private val personPage = PersonPage()
-    private val setUp = SetUp()
+    //private val setUp = SetUpSelenoid() // for use docker container with selenoid
+    private val setUp = SetUp() // for use ordinary webdriver from selenide
 
 
     @BeforeMethod
