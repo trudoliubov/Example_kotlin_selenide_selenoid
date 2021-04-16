@@ -29,12 +29,11 @@ object CheckingMails {
 
             // retrieve the messages from the folder in an array and print it
             val messages = emailFolder.messages
-            //System.out.println("messages.length---" + messages.length);
             var i = 0
             val n = messages.size
             while (i < n) {
                 val message = messages[i]
-                code = message.subject.replace("\\D".toRegex(), "")
+                code = message.subject.replace("\\D".toRegex(), "") // replacing all characters except digits
                 i++
             }
 
